@@ -1,0 +1,16 @@
+:root{
+    --nav-bgc: white;;
+    --body-bgc:#e9f1f7;
+    --logo-txt-color:#8265eb;
+    --btn-color:#cfe9fd;
+}
+body{
+    background-color: var(--body-bgc);
+}
+nav{
+    background-color: var(--nav-bgc);
+}
+#logo{
+    color: var(--logo-txt-color);
+}
+  
