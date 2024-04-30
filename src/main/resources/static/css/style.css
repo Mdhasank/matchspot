@@ -1,37 +1,57 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box !important;
+    box-sizing: border-box;
 }
 :root{
     --nav-bgc: white;;
-    --body-bgc:#e9f1f7;
+    --body-bgc:#ffffff;
     --logo-txt-color:#8265eb;
     --primary-btn-bg-color:#FE386B;
 }
 body{
     background-color: var(--body-bgc);
 }
+/* --- nav --- */
 nav{
     background-color: var(--nav-bgc);
 }
-li{
-    list-style: none;
-}
-a{
-    text-decoration: none;
+a.nav-link{
     padding: .5em !important;
+    border: 2px solid #04ff8a00;
+    color: #000000c1;
 }
-
+a.nav-link:hover{
+    color: rgba(0, 0, 0, 0.925);
+    border-bottom: 2px solid #08d776;
+    transition: .3s ease-in-out;
+}
 
 .customer-link{
     border-radius: 4px;
-    background: darkseagreen;
-   
+    background: #08d776;
+   color: white !important;
+   margin-right: 0.5em;
 }
+
 #logo {
+    color: #28a745;
+    padding: .4em;
     margin: 0 3em 0 0;
+    font-weight: 700;
+    font-size: 1.5rem;
 }
+@media (min-width: 768px) {
+    #logo {
+        text-align: left;
+    }
+
+    #registerlinks {
+        margin-left: auto;
+    }
+}
+
+/* --- main --- */
 main h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -49,7 +69,7 @@ main p {
     min-height: 300px;
     background: no-repeat center center;
     background-size: cover;
-    position: relative; /* Add position relative */
+    position: relative; 
 }
 
 .carousel-caption {
@@ -59,7 +79,7 @@ main p {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    width: 80%; /* Set a width to center the text */
+    width: 80%; 
 }
 
 .carousel-caption h1 {
@@ -75,15 +95,15 @@ main p {
 
 @media (max-width: 768px) {
     .carousel-caption {
-        width: 90%; /* Adjust width for smaller screens */
+        width: 90%; 
     }
 
     .carousel-caption h1 {
-        font-size: 2rem; /* Reduce font size for smaller screens */
+        font-size: 2rem; 
     }
 
     .carousel-caption p {
-        font-size: 1.2rem; /* Reduce font size for smaller screens */
+        font-size: 1.2rem; 
     }
 }
 @media (max-width: 768px) {
@@ -100,32 +120,11 @@ main p {
     }
     
 }
+/* --- turf ---- */
 
-
-@media (min-width: 768px) {
-    #logo {
-        text-align: left;
-    }
-
-    #registerlinks {
-        margin-left: auto;
-    }
-}
 .turf-section {
     padding: 50px 0;
-    background-color: #f9f9f9;
-}
-
-.turf-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s;
-    cursor: pointer;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    background-color: #ffffff;
 }
 
 .turf-card:hover {
@@ -138,22 +137,35 @@ main p {
     object-fit: cover;
     border-bottom: 1px solid #ddd;
 }
-
-.turf-card-body {
-    padding: 20px;
-    flex-grow: 1;
-}
-
 .turf-card-title {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+.turf-card {
+    position: relative; 
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.turf-card-body {
+    padding: 20px;
+    flex-grow: 1;
+    position: relative; 
+    background-color: #effaee;
+}
+
 .turf-card-text {
     font-size: 1rem;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 40px; 
 }
 
 .turf-card-button {
@@ -164,7 +176,9 @@ main p {
     border-radius: 5px;
     font-size: 1rem;
     transition: background-color 0.3s;
-    align-self: flex-end;
+    position: absolute; 
+    bottom: 10px;
+    left: 16px; 
 }
 
 .turf-card-button:hover {
@@ -175,4 +189,78 @@ main p {
     .turf-card {
         margin-bottom: 30px;
     }
+    .col-lg-4{
+        margin: .6em 0;
+    }
+}
+/* About Us section */
+.about-section {
+    padding: 4rem 0;
+    background-color: #effaee;
+}
+
+.section-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-text {
+    font-size: 1.25rem;
+    margin: .8rem 0;
+}
+
+/* Testimonials section */
+.testimonials-section {
+    padding: 4rem 0;
+    background-color: #ffffff;
+}
+
+.section-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card {
+    background-color: #effaee;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 100%;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555; 
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #333; 
+}
+/* --- Contact us --- */
+#contact-us {
+    padding: 80px 0;
+    background-color: #effaee;
+  }
+  
+  .contact-content {
+    margin: 0  0 30px 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-content {
+      padding: 20px;
+    }
+  }
+  
+/* --- Footer --- */
+.footer-section {
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+    margin-top: 2rem;
+}
+
+.footer-section p {
+    margin-bottom: 0;
 }
